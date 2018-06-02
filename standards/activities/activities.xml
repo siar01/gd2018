@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<activities>
+
+  <login_act>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"/>
+    <student_id type="INT" length="8" valtype="FREE"/>
+  </login_act>
+
+  <course_act>
+    <record_type type="INT" length="1" valtype="SET">
+      <valmap>course_act.json</valmap>
+    </record_type>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
+    <student_id type="INT" length="8" valtype="FREE"></student_id>
+    <course_id type="INT" lenggth="8" valtype="FREE"></course_id>
+  </course_act>
+
+  <video_act>
+    <record_type type="INT" length="1" valtype="SET">
+      <valmap>video_act.json</valmap>
+    </record_type>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
+    <student_id type="INT" length="8" valtype="FREE"></student_id>
+    <video_id type="INT" length="8" valtype="FREE"></video_id>
+    <cond lhs="record_type" operator="equal" rhs="4">
+    </cond>
+    <!-- <data type="INT" length=8 valtype="FREE"></video_id> -->
+  </video_act>
+
+  <homework_act>
+    <record_type type="INT" length="1" valtype="SET">
+      <valmap>homework_act.json</valmap>
+    </record_type>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
+    <student_id type="INT" length="8" valtype="FREE"></student_id>
+    <homework_id type="INT" length="8" valtype="FREE"></homework_id>
+  </homework_act>
+
+  <quiz_act>
+    <record_type type="INT" length="1" valtype="SET">
+      <valmap>quiz.json</valmap>
+    </record_type>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
+    <student_id type="INT" length="8" valtype="FREE"></student_id>
+    <quiz_id type="INT" length="8" valtype="FREE"></quiz_id>
+  </quiz_act>
+
+  <exam_act>
+    <record_type type="INT" length="1" valtype="SET">
+      <valmap>exam.json</valmap>
+    </record_type>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
+    <student_id type="INT" length="8" valtype="FREE"></student_id>
+    <exam_id type="INT" length="8" valtype="FREE"></exam_id>
+  </exam_act>
+
+  <discuss_act>
+    <record_type type="INT" length="1" valtype="SET">
+      <valmap>discuss_act.json</valmap>
+    </record_type>
+    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
+    <student_id type="INT" length="8" valtype="FREE"></student_id>
+    <discuss_id type="INT" length="8" valtype="FREE"></discuss_id>
+  </discuss_act>
+
+</activities>

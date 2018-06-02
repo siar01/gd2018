@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<demographics>
+
+  <id type="INT" length=8 valtype="FREE" private="FALSE">
+    <descryption>id，不重复</descrypthon>
+  </id>
+
+  <gender type="INT" length=1 valtype="SET" private="TRUE">
+    <descryption>性别</descrypthon>
+    <valmap>../gendermap.json</valmap>
+  </gender>
+
+  <birthday type="INT" length=8 valtype="DATE" private="TRUE">
+    <desctyption>出生日期</descryption>
+  </birthday>
+
+  <degree type="INT" length=2 valtype="SET" private="TRUE">
+    <descryption>最高学历,值为学历代码</descryption>
+    <valmap>../degree.json</valmap>
+  </degree>
+
+  <major type="INT" length=2 valtype="SET" private="TRUE">
+    <descryption>当前专业，值为专业代码</descryption>
+    <valmap>../major.json</valmap>
+  </major>
+
+  <location type="INT" length=2 valtype="SET" private="TRUE">
+    <descryption>所在地区，值为行政区划代码</descryption>
+    <valmap>../location.json</valmap>
+  </location>
+
+  <last_modify type="INT" length=2 valtype="TIMESTAMP" private="FALSE">
+    <descryption>最后修改时间</descryption>
+  </last_modify>
+
+</demographics>

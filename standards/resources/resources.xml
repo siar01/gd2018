@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<resources>
+
+  <course>
+    <course_id type="INT" length=8 valtype="FREE"></course_id>
+  </course>
+
+  <course_relation>
+    <primary_course_id type="INT" length=8 valtype="FREE"></primary_course_id>
+    <advanced_course_id type="INT" length=8 valtype="FREE"></advanced_course_id>
+  </course_relation>
+
+  <video>
+    <video_id type="INT" length=8 valtype="FREE"></video_id>
+    <belonging_course_id type="INT" length=8 valtype="FREE"></belonging_course_id>
+  </video>
+
+  <homework>
+    <homework_id type="INT" length=8 valtype="FREE"></homework_id>
+  </homework>
+</resources>
