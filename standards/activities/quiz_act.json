@@ -1,5 +1,5 @@
 {
-  "0":"enter_quiz",
-  "1":"handin_quiz",
-  "2":"leave_quiz"
+  "enter_quiz":0,
+  "handin_quiz":1,
+  "leave_quiz":2
 }

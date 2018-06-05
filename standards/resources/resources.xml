@@ -1,21 +1,78 @@
 <?xml version="1.0"?>
 <resources>
 
-  <course>
-    <course_id type="INT" length=8 valtype="FREE"></course_id>
+  <course code="0x0300">
+    <course_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </course_id>
+    <starting_time>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </starting_time>
+    <finishing_time>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </finishing_time>
   </course>
 
-  <course_relation>
-    <primary_course_id type="INT" length=8 valtype="FREE"></primary_course_id>
-    <advanced_course_id type="INT" length=8 valtype="FREE"></advanced_course_id>
+  <course_relation code="0x0301">
+    <primary_course_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </primary_course_id>
+    <advanced_course_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </advanced_course_id>
   </course_relation>
 
-  <video>
-    <video_id type="INT" length=8 valtype="FREE"></video_id>
-    <belonging_course_id type="INT" length=8 valtype="FREE"></belonging_course_id>
+  <video code="0x0302">
+    <video_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </video_id>
+    <belonging_course_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </belonging_course_id>
   </video>
 
-  <homework>
-    <homework_id type="INT" length=8 valtype="FREE"></homework_id>
+  <homework code="0x0303">
+    <homework_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </homework_id>
+    <belonging_course_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </belonging_course_id>
   </homework>
+
+  <quiz code="0x0304">
+    <quiz_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </quiz_id>
+  </quiz>
 </resources>

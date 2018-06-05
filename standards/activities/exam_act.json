@@ -1,5 +1,5 @@
 {
-  "0":"enter_exam",
-  "1":"handin_exam",
-  "2":"leave_exam"
+  "enter_exam":0,
+  "handin_exam":1,
+  "leave_exam":2
 }

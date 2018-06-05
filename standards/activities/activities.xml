@@ -1,66 +1,190 @@
 <?xml version="1.0"?>
 <activities>
 
-  <login_act>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"/>
-    <student_id type="INT" length="8" valtype="FREE"/>
+  <login_act code="0x0100">
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
   </login_act>
 
-  <course_act>
-    <record_type type="INT" length="1" valtype="SET">
+  <course_act code="0x0101">
+    <record_type>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
       <valmap>course_act.json</valmap>
     </record_type>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
-    <student_id type="INT" length="8" valtype="FREE"></student_id>
-    <course_id type="INT" lenggth="8" valtype="FREE"></course_id>
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
+    <course_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </course_id>
   </course_act>
 
-  <video_act>
-    <record_type type="INT" length="1" valtype="SET">
+  <video_act code="0x0102">
+    <record_type>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
       <valmap>video_act.json</valmap>
     </record_type>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
-    <student_id type="INT" length="8" valtype="FREE"></student_id>
-    <video_id type="INT" length="8" valtype="FREE"></video_id>
-    <cond lhs="record_type" operator="equal" rhs="4">
-    </cond>
-    <!-- <data type="INT" length=8 valtype="FREE"></video_id> -->
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
+    <video_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </video_id>
+    <payload cond="record_type == drag_video || record_type == change_video_speed">
+      <type>MIXED</type>
+      <length>4</length>
+    </payload>
   </video_act>
 
-  <homework_act>
-    <record_type type="INT" length="1" valtype="SET">
+  <homework_act code="0x0103">
+    <record_type>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
       <valmap>homework_act.json</valmap>
     </record_type>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
-    <student_id type="INT" length="8" valtype="FREE"></student_id>
-    <homework_id type="INT" length="8" valtype="FREE"></homework_id>
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
+    <homework_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </homework_id>
   </homework_act>
 
-  <quiz_act>
-    <record_type type="INT" length="1" valtype="SET">
+  <quiz_act code="0x0104">
+    <record_type>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
       <valmap>quiz.json</valmap>
     </record_type>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
-    <student_id type="INT" length="8" valtype="FREE"></student_id>
-    <quiz_id type="INT" length="8" valtype="FREE"></quiz_id>
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
+    <quiz_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </quiz_id>
   </quiz_act>
 
-  <exam_act>
-    <record_type type="INT" length="1" valtype="SET">
+  <exam_act code="0x0105">
+    <record_type>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
       <valmap>exam.json</valmap>
     </record_type>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
-    <student_id type="INT" length="8" valtype="FREE"></student_id>
-    <exam_id type="INT" length="8" valtype="FREE"></exam_id>
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
+    <exam_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </exam_id>
   </exam_act>
 
-  <discuss_act>
-    <record_type type="INT" length="1" valtype="SET">
+  <discuss_act code="0x0106">
+    <record_type>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
       <valmap>discuss_act.json</valmap>
     </record_type>
-    <timestamp type="INT" length="8" valtype="TIMESTAMP"></timestamp>
-    <student_id type="INT" length="8" valtype="FREE"></student_id>
-    <discuss_id type="INT" length="8" valtype="FREE"></discuss_id>
+    <timestamp>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </timestamp>
+    <user_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
+    <discuss_id>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </discuss_id>
   </discuss_act>
 
 </activities>

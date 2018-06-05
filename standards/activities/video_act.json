@@ -1,8 +1,8 @@
 {
-  "0":"play_video",
-  "1":"pause_video",
-  "2":"resume_video",
-  "3":"drag_video",
-  "4":"change_video_speed",
-  "5":"download_video"
+  "play_video":0,
+  "pause_video":1,
+  "resume_video":2,
+  "drag_video":3,
+  "change_video_speed":4,
+  "download_video":5
 }

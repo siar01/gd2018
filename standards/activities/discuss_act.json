@@ -1,7 +1,7 @@
 {
-  "0":"enter_discuss",
-  "1":"make_a_post",
-  "2":"make_a_comment",
-  "3":"make_a_reply",
-  "4":"make_a_like"
+  "enter_discuss":0,
+  "make_a_post":1,
+  "make_a_comment":2,
+  "make_a_reply":3,
+  "like":4
 }

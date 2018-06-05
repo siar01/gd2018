@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<header>
+  <version length="2" />
+  <datatype length="2" />
+  <totallength length="4" />
+  <totalentry length="4" />
+  <flags length="2">
+    <flag bit="0">isSlice</flag>
+    <flag bit="1">isCompressed</flag>
+    <flag bit="2">isEncrypted</flag>
+  </flags>
+  <crc32 length="4" />
+</header>

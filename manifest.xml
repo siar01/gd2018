@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<path>
+  <version code="0x0000">
+      <scripts>scripts/</scripts>
+      <modules>scripts/modules/</modules>
+      <demographics>standards/demographics/</demographics>
+      <activities>standards/activities/</activities>
+      <contents>standards/contents/</contents>
+      <resources>standards/resources/</resources>
+      <header>standards/</header>
+  </version>
+</path>

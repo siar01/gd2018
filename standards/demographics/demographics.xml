@@ -1,36 +1,59 @@
 <?xml version="1.0"?>
 <demographics>
 
-  <id type="INT" length=8 valtype="FREE" private="FALSE">
-    <descryption>id，不重复</descrypthon>
-  </id>
+  <user code="0x0000">
+    <user_id>
+      <descryption>id，不重复</descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>FREE</valtype>
+    </user_id>
 
-  <gender type="INT" length=1 valtype="SET" private="TRUE">
-    <descryption>性别</descrypthon>
-    <valmap>../gendermap.json</valmap>
-  </gender>
+    <gender>
+      <descryption>性别</descryption>
+      <type>INT</type>
+      <length>1</length>
+      <valtype>SET</valtype>
+      <valmap>gendermap.json</valmap>
+    </gender>
 
-  <birthday type="INT" length=8 valtype="DATE" private="TRUE">
-    <desctyption>出生日期</descryption>
-  </birthday>
+    <birthday>
+      <descryption>出生日期</descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>DATE</valtype>
+    </birthday>
 
-  <degree type="INT" length=2 valtype="SET" private="TRUE">
-    <descryption>最高学历,值为学历代码</descryption>
-    <valmap>../degree.json</valmap>
-  </degree>
+    <degree>
+      <descryption>最高学历,值为学历代码</descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>SET</valtype>
+      <valmap>degree.json</valmap>
+    </degree>
 
-  <major type="INT" length=2 valtype="SET" private="TRUE">
-    <descryption>当前专业，值为专业代码</descryption>
-    <valmap>../major.json</valmap>
-  </major>
+    <major>
+      <descryption>当前专业，值为专业代码</descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>SET</valtype>
+      <valmap>major.json</valmap>
+    </major>
 
-  <location type="INT" length=2 valtype="SET" private="TRUE">
-    <descryption>所在地区，值为行政区划代码</descryption>
-    <valmap>../location.json</valmap>
-  </location>
+    <location>
+      <descryption>所在地区，值为行政区划代码</descryption>
+      <type>INT</type>
+      <length>4</length>
+      <valtype>SET</valtype>
+      <valmap>location.json</valmap>
+    </location>
 
-  <last_modify type="INT" length=2 valtype="TIMESTAMP" private="FALSE">
-    <descryption>最后修改时间</descryption>
-  </last_modify>
+    <last_modify>
+      <descryption>最后修改时间</descryption>
+      <type>INT</type>
+      <length>8</length>
+      <valtype>TIMESTAMP</valtype>
+    </last_modify>
+  </user>
 
 </demographics>

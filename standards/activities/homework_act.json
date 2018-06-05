@@ -1,5 +1,5 @@
 {
-  "0":"enter_homework",
-  "1":"handin_homework",
-  "2":"leave_homework"
+  "enter_homework":0,
+  "handin_homework":1,
+  "leave_homework":2
 }
