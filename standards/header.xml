@@ -1,13 +1,29 @@
 <?xml version="1.0"?>
+<!-- 文件名：header.xml
+描述：定义了数据文件中文件头的格式，文件头长度必须固定，并且从0字节开始
+规则：
+  1.根元素为<header>标签，该标签没有属性
+  2.根元素的所有子元素必须包含属性length，且该属性的取值属于{1,2,4,8}，单位为字节（octet）
+    根元素的所有子元素length之和为文件头长度
+  3.除<flags>以外的子元素在语义上应不可分割，类似数据库1NF，并且不能拥有子元素
+  4.<flags>为按bit使用的标志位，可以拥有若干<flag>子元素，<flag>子元素必须包含属性code，
+    code属性取值为十六进制整数，以"0x"开始，代表被使用的bit
+  5.任意叶子元素可以包含任意字符串
+  6.子元素的顺序就是二进制文件中字段的存储顺序
+文件头结构：
+0         2          4             8            12      14      18
+| version | datatype | totallength | totalentry | flags | crc32 |
+-->
+
 <header>
   <version length="2" />
   <datatype length="2" />
-  <totallength length="4" />
-  <totalentry length="4" />
+  <body_length length="4" />
+  <total_entry length="4" />
   <flags length="2">
-    <flag bit="0">isSlice</flag>
-    <flag bit="1">isCompressed</flag>
-    <flag bit="2">isEncrypted</flag>
+    <flag code="0x1">isSlice</flag>
+    <flag code="0x2">isCompressed</flag>
+    <flag code="0x4">isEncrypted</flag>
   </flags>
   <crc32 length="4" />
 </header>

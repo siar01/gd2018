@@ -4,5 +4,6 @@
   "resume_video":2,
   "drag_video":3,
   "change_video_speed":4,
-  "download_video":5
+  "leave_video":5,
+  "download_video":6
 }

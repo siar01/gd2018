@@ -1,8 +1,17 @@
 <?xml version="1.0"?>
+<!-- 文件名：manifest.xml
+描述：该文件用于指明标准文件所在路径
+规则：
+  1.根元素为<path>
+  2.根元素下只能有一种子标签,即<version>标签。该标签必须包含code属性。根元素可以包含多个<version>子标签,指示不同版本的标准
+  3.<version>标签code属性的类型是无符号(unsigned)两字节(octet)整数。代表该版标准的版本号。
+  4.<version>标签的子标签至少包含<header>,<demographics>,<activities>,<contents>,<resources>五个子标签，子标签的顺序任意。
+    这五个标签中的内容分别代表标准文件 header.xml, demographics.xml, activities.xml, contents.xml, resources.xml的所在路径
+    路径格式为标准文件与该文件的相对路径，因此，建议将该文件与标准文件置于同一目录下
+-->
+
 <path>
   <version code="0x0000">
-      <scripts>scripts/</scripts>
-      <modules>scripts/modules/</modules>
       <demographics>standards/demographics/</demographics>
       <activities>standards/activities/</activities>
       <contents>standards/contents/</contents>

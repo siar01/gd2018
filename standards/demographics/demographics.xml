@@ -1,4 +1,18 @@
 <?xml version="1.0"?>
+<!-- 文件名：demographics.xml
+描述：该文件用于描述mooc平台中用户的基本信息标准
+规则：
+  1.根元素为<demographics>，但是该元素并不是解析元数据的基本元素 (参考scripts/modules/item.py)，
+    原则上将<demographics>的所有子树全部置于另一根之下仍能够正常解析标准，出于可读性和分类考虑而设置<demographics>标签
+  2.<demographics>的子元素（比如<user>）必须包含属性code，其值为2字节（octet）长的无符号（unsigned）十六进制数
+    该数字高字节代表分类，对于demographics,值为0。不包含其它属性。语义上应将这种子元素及其所有子树看作不可分割的整体，
+    描述了一个元数据（比如<user>描述了“用户”）
+  3.类似<user>这样的元数据元素没有属性，但包含若干个子元素，每个子元素代表该元数据的一个属性，每个属性至少包含4个子元素：<descryption>,
+    <type>, <length>, <valtype>。其语义分别是 描述性字符串、数据类型、数据字节数、值域类型。
+  4.当<valtype>的值为 SET 时，属性的子元素中必须包含<valmap>，该标签的值是一个字符串，代表值域集合所在的文件名，该文件是一个后缀为
+    .json的json文件。其中键值对的语义为 语义符号:值, 如 "male":0
+-->
+
 <demographics>
 
   <user code="0x0000">
@@ -14,7 +28,7 @@
       <type>INT</type>
       <length>1</length>
       <valtype>SET</valtype>
-      <valmap>gendermap.json</valmap>
+      <valmap>gender.json</valmap>
     </gender>
 
     <birthday>

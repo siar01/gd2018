@@ -34,6 +34,18 @@
       <length>8</length>
       <valtype>FREE</valtype>
     </homework_id>
+    <score>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>FREE</valtype>
+    </score>
+    <max_score>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>FREE</valtype>
+    </max_score>
     <payload>
       <descryption></descryption>
       <type>TEXT</type>
@@ -62,6 +74,18 @@
       <length>8</length>
       <valtype>FREE</valtype>
     </quiz_id>
+    <score>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>FREE</valtype>
+    </score>
+    <max_score>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>FREE</valtype>
+    </max_score>
     <payload>
       <descryption></descryption>
       <type>TEXT</type>
@@ -90,6 +114,18 @@
       <length>8</length>
       <valtype>FREE</valtype>
     </exam_id>
+    <score>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>FREE</valtype>
+    </score>
+    <max_score>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>2</length>
+      <valtype>FREE</valtype>
+    </max_score>
     <payload>
       <descryption></descryption>
       <type>TEXT</type>

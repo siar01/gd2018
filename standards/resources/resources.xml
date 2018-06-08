@@ -44,6 +44,12 @@
       <length>8</length>
       <valtype>FREE</valtype>
     </video_id>
+    <duration>
+      <descryption></descryption>
+      <type>INT</type>
+      <length>4</length>
+      <valtype>FREE</valtype>
+    </duration>
     <belonging_course_id>
       <descryption></descryption>
       <type>INT</type>

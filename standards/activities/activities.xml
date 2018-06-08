@@ -1,4 +1,29 @@
 <?xml version="1.0"?>
+<!-- 文件名：activities.xml
+描述：该文件用于描述mooc中，学生的活动记录。 该部分数据是mooc数据中最重要的部分
+规则：
+  1.根标签为<activities>
+  2.根标签<activities>的子标签(如<login_act>)称为元数据标签，语义上代表一个元数据，应看作不可分割的整体。
+  3.元数据标签名称应当在 该版本的 所有标准范围内不重复
+  4.元数据标签必须包含属性code,其值类型是2字节(octet)长，无符号(unsigned)整形，代表该元数据的编码。
+    其值的高字节为0x01，0x01代表该元数据所属的activities分类
+  5.元数据标签的子标签(如<timestamp>)称为字段标签，语义上代表元数据的一项字段。
+  6.字段标签在其所属的元数据标签范围内应当具有唯一的名称
+  7.字段标签应至少具有<descryption>, <type>, <length>, <valtype>四个子标签
+    分别对应字段的 简单描述，数据类型，数据字节(octet)数,值域类型
+  8.字段标签的<type>子标签取值为INT，FLOAT 或者 TEXT
+    当取值为TEXT时，字段必须包含<coding>标签，指明该字段的编码类型，目前全部为UTF-8。
+  9.字段的<length>子标签取确定值时，该字段为定长字段。
+    若要使用变长字段，则该字段的<length>子标签的值应当是该元数据标签中的另一字段的名字，则该变长字段的长度由该元数据中的另一字段的值决定
+  10.字段标签的<valtype>子标签指明字段的值域类型。若值为SET，则该字段必须包含<valmap>标签，用于指明值域集合
+  11<valmap>的值代表值域集合所在的文件名，该文件是一个后缀为.json的json文件。其中键值对为 语义符号:值。以video_act.json文件为例，
+    该文件说明<video_act>的<record_type>取值集合为{0,1,2,3,4,5,6}
+  12.字段标签可以具有属性cond，具有cond属性的字段为条件字段，cond 的类型是字符串，该字符串的形式应当符合 C 语言条件语句的形式
+    (比如 <payload cond="record_type == drag_video || record_type == change_video_speed"> )
+    出现在比较操作符(>,<,==)左边的操作数应当是该元数据中某一 定长字段 的名字。
+    出现在比较操作符(>,<,==)右边的操作数应当在左操作数指明的字段的值域范围内，若左操作数指明的字段值域类型为集合类(SET)，则右操作数允许使用代表值的语义符号()
+  13.字段在元数据中的顺序即是二进制文件的打包顺序，因此，必须保证元数据中，定长字段在前，变长字段与条件字段在后。
+-->
 <activities>
 
   <login_act code="0x0100">
@@ -70,7 +95,8 @@
       <valtype>FREE</valtype>
     </video_id>
     <payload cond="record_type == drag_video || record_type == change_video_speed">
-      <type>MIXED</type>
+      <type>INT</type>
+      <valtype>FREE</valtype>
       <length>4</length>
     </payload>
   </video_act>
@@ -109,7 +135,7 @@
       <type>INT</type>
       <length>1</length>
       <valtype>SET</valtype>
-      <valmap>quiz.json</valmap>
+      <valmap>quiz_act.json</valmap>
     </record_type>
     <timestamp>
       <descryption></descryption>
@@ -137,7 +163,7 @@
       <type>INT</type>
       <length>1</length>
       <valtype>SET</valtype>
-      <valmap>exam.json</valmap>
+      <valmap>exam_act.json</valmap>
     </record_type>
     <timestamp>
       <descryption></descryption>
